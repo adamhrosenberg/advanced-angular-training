@@ -3,12 +3,12 @@ import {LicensePlate} from './license-plate';
 
 @Component({
   selector: 'app-root',
-  template: `
-      <app-hello></app-hello>
-  `
+  templateUrl: './app.component.html',
 })
 export class AppComponent {
 
+  title: string = "title yo";
+  description: string = "desc yo";
   // This is for lab DC1
   licensePlates: LicensePlate[] = [
     {

@@ -25,6 +25,8 @@ import {TokenInterceptorService} from './token-http-interceptor.service';
 import {CheckoutFormComponent} from './checkout-form/checkout-form.component';
 import {CheckoutViewComponent} from './checkout-view/checkout-view.component';
 import {CartViewComponent} from './cart-view/cart-view.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { JumbotronComponent } from './jumbotron/jumbotron.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,7 @@ import {CartViewComponent} from './cart-view/cart-view.component';
     PopupWindowComponent, LoaderComponent, HeaderComponent,
     LoaderViewChildComponent,
     CarouselComponent, CurrencySwitcherComponent,
-    CheckoutFormComponent, CheckoutViewComponent, CartViewComponent
+    CheckoutFormComponent, CheckoutViewComponent, CartViewComponent, NavigationComponent, JumbotronComponent
   ],
   imports: [
     BrowserModule,
