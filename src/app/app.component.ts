@@ -1,6 +1,6 @@
-import { LicensePlateService } from './../../solutions/labS1/license-plate.service';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {LicensePlate} from './license-plate';
+import { LicensePlateService } from './license-plate.service';
 
 @Component({
   selector: 'app-root',
