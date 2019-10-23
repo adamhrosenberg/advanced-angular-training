@@ -10,6 +10,10 @@ export class AppComponent {
 
   title: string = "title yo";
   description: string = "desc yo";
+
+  isEven(index:number) {
+    return index%2==0;
+  }
   // This is for lab DC1
   licensePlates: LicensePlate[] = [
     {

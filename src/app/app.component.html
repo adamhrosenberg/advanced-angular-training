@@ -7,7 +7,7 @@
     <div class="row" >
       <app-license-plate *ngFor="let plate of licensePlates; index as i" [plate]="plate" buttonText="Add To Cart"
       class="col-md-4"
-     [class.background-grey]="!(i % 2)"></app-license-plate>
+     [ngClass]="{'background-grey':isEven(i)}"></app-license-plate>
     </div>
   </div>
 </main>
