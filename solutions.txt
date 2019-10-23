@@ -1,0 +1,11 @@
+LAB #1:
+No solution - just run the commands in a terminal
+
+---------------------------------------------------------------------------------------------------
+LAB C1 and further:
+
+Run the following command:
+ npm run solution labC1
+
+ This will copy-paste the solution for that lab from the "solutions" folder into the "app" folder
+ --------------------------------------------------------------------------------------------------
