@@ -5,7 +5,9 @@
 
   <div class="container">
     <div class="row" >
-      <app-license-plate [plate]="licensePlate" buttonText="Add To Cart" class="col-md-4"></app-license-plate>
+      <app-license-plate *ngFor="let plate of licensePlates; let i=index" [plate]="plate" buttonText="Add To Cart"
+      class="col-md-4"
+     [ngClass]="{'background-grey': i % 2 == 0}"></app-license-plate>
     </div>
   </div>
 </main>
