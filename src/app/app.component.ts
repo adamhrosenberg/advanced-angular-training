@@ -18,7 +18,7 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit() {
-    this.plates = this.licensePlateService.getList();
+    this.licensePlateService.getList().subscribe(plates => this.plates = plates);
   }
 
   isEven(index:number) {
