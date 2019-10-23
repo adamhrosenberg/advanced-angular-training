@@ -27,6 +27,7 @@ import {CheckoutViewComponent} from './checkout-view/checkout-view.component';
 import {CartViewComponent} from './cart-view/cart-view.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { JumbotronComponent } from './jumbotron/jumbotron.component';
+import { AppHighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { JumbotronComponent } from './jumbotron/jumbotron.component';
     PopupWindowComponent, LoaderComponent, HeaderComponent,
     LoaderViewChildComponent,
     CarouselComponent, CurrencySwitcherComponent,
-    CheckoutFormComponent, CheckoutViewComponent, CartViewComponent, NavigationComponent, JumbotronComponent
+    CheckoutFormComponent, CheckoutViewComponent, CartViewComponent, NavigationComponent, JumbotronComponent, AppHighlightDirective
   ],
   imports: [
     BrowserModule,
