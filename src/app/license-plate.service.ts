@@ -1,12 +1,12 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, OnDestroy } from '@angular/core';
 import { LicensePlate } from './license-plate';
 import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class LicensePlateService {
+export class LicensePlateService implements OnDestroy {
 
   constructor(private httpClient: HttpClient) { }
 
