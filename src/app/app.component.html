@@ -6,7 +6,7 @@
 
   <div class="container">
     <div class="row" >
-      <app-license-plate *ngFor="let plate of licensePlates$ | async; index as i" [plate]="plate" buttonText="Add To Cart"
+      <app-license-plate *ngFor="let plate of licensePlates$ | async; index as i" [currencyInfo]="currencyInfo$ | async" [plate]="plate" buttonText="Add To Cart"
       class="col-md-4"
      [ngClass]="{'background-grey':isEven(i)}" appHighlight appHighlightColor="yellow"></app-license-plate>
     </div>

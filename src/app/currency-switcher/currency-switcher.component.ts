@@ -1,6 +1,8 @@
-import { CurrencyService } from './../currency.service';
+import { Observable } from 'rxjs/index';
+import { CurrencyService, CurrencyInfo } from './../currency.service';
 import { Component } from '@angular/core';
 import {Currency} from './currency';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-currency-switcher',
@@ -9,9 +11,12 @@ import {Currency} from './currency';
 })
 export class CurrencySwitcherComponent {
 
+  currency$: Observable<CurrencyInfo>;
   showItems = false;
 
-  constructor(public currencyService: CurrencyService) { }
+  constructor(public currencyService: CurrencyService) {
+    this.currency$ = this.currencyService.getCurrencyInfo()
+   }
 
   changeCurrency(currency: Currency) {
     this.currencyService.setCurrency(currency);

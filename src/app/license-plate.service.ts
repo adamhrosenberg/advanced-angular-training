@@ -6,7 +6,7 @@ import { Observable, of } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class LicensePlateService implements OnDestroy {
+export class LicensePlateService{
 
   constructor(private httpClient: HttpClient) { }
 
