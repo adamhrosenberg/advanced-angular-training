@@ -17,4 +17,15 @@ export class CurrencyService {
   setCurrency(currency: Currency) {
     this.currency = currency;
   }
+
+  getExchangeRateForCurency() {
+    switch (this.currency){
+      case 'USD':
+        return 1;
+      case 'EUR':
+        return 1.2;
+      case 'GBP':
+        return 1.3;
+    }
+  }
 }
