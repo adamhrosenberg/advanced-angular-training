@@ -12,7 +12,6 @@ export class AppComponent {
 
   title: string = "title yo";
   description: string = "desc yo";
-  plates: LicensePlate[];
   licensePlates$: Observable<LicensePlate[]>;
 
   constructor(private licensePlateService: LicensePlateService){
@@ -20,6 +19,6 @@ export class AppComponent {
   }
 
   isEven(index:number) {
-    return index%2==0;
+    return index%2;
   }
 }
