@@ -1,6 +1,7 @@
 import { AppHighlightDirective } from '../highlight.directive';
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {LicensePlate} from '../license-plate';
+import { CurrencyService } from 'app/currency.service';
 
 @Component({
   selector: 'app-license-plate',
@@ -15,5 +16,5 @@ export class LicensePlateComponent {
   @Input()
   buttonText: string;
 
-  constructor() { }
+  constructor(public currencyService: CurrencyService) { }
 }

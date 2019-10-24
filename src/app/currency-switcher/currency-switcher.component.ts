@@ -1,3 +1,4 @@
+import { CurrencyService } from './../currency.service';
 import { Component } from '@angular/core';
 import {Currency} from './currency';
 
@@ -10,9 +11,11 @@ export class CurrencySwitcherComponent {
 
   showItems = false;
 
-  constructor() { }
+  constructor(public currencyService: CurrencyService) { }
 
   changeCurrency(currency: Currency) {
-    // TODO
+    this.currencyService.setCurrency(currency);
+    this.showItems = false;
   }
+
 }
