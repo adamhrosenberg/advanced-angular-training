@@ -8,19 +8,16 @@ import { LicensePlateService } from './license-plate.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit, OnDestroy{
+export class AppComponent implements OnDestroy{
 
   title: string = "title yo";
   description: string = "desc yo";
   plates: LicensePlate[];
   private subscription: Subscription;
+  licensePlates$: Observable<LicensePlate[]>;
 
   constructor(private licensePlateService: LicensePlateService){
-
-  }
-
-  ngOnInit() {
-    this.subscription = this.licensePlateService.getList().subscribe(plates => this.plates = plates);
+    this.licensePlates$ = this.licensePlateService.getList();
   }
 
   ngOnDestroy() {
