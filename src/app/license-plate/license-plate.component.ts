@@ -12,6 +12,9 @@ import { Currency } from 'app/currency-switcher/currency';
 })
 export class LicensePlateComponent {
 
+  @Output()
+  buttonClick: EventEmitter<LicensePlate> = new EventEmitter();
+
   @Input()
   plate: LicensePlate;
 

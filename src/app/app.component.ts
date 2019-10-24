@@ -12,6 +12,8 @@ import { CurrencyService, CurrencyInfo } from './currency.service';
 })
 export class AppComponent {
 
+  showPopUp: boolean = false;
+
   title: string = "title yo";
   description: string = "desc yo";
   licensePlates$: Observable<LicensePlate[]>;
@@ -27,5 +29,9 @@ export class AppComponent {
 
   isEven(index:number) {
     return index%2;
+  }
+
+  addToCart(plate: LicensePlate) {
+    this.showPopUp = true;
   }
 }

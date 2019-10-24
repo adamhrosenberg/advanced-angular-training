@@ -6,14 +6,14 @@ import {HttpClient} from '@angular/common/http';
 @Injectable()
 export class CartService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
   getCartContents(): Observable<LicensePlate[]> {
-    return this.http.get<LicensePlate[]>('http://localhost:8000/cart');
+    return this.httpClient.get<LicensePlate[]>('http://localhost:8000/cart');
   }
 
   addToCart(plate: LicensePlate) {
-    // TODO
+    return this.httpClient.put<any>('http://localhost:800/cart' + plate._id, null);
   }
 
   removeFromCart(plate: LicensePlate) {

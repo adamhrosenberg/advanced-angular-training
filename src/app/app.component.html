@@ -6,9 +6,13 @@
 
   <div class="container">
     <div class="row" >
-      <app-license-plate *ngFor="let plate of licensePlates$ | async; index as i" [currencyInfo]="currencyInfo$ | async" [plate]="plate" buttonText="Add To Cart"
+      <app-license-plate *ngFor="let plate of licensePlates$ | async; index as i" [currencyInfo]="currencyInfo$ | async" [plate]="plate" buttonText="Add To Cart" (buttonClick)="addToCart($event)"
       class="col-md-4"
      [ngClass]="{'background-grey':isEven(i)}" appHighlight appHighlightColor="yellow"></app-license-plate>
+     <app-popup-window
+     [isOpen]="showPopUp" title="Item Added To Cart :)" (onClose)="showPopup=false"> Thanks:D
+
+     </app-popup-window>
     </div>
   </div>
 </main>
